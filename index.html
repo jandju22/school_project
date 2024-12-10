@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anmeldung zur Winterlaufserie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="cover-image">
+    <div class="cover-text">
+      Anmeldung zur <span class="bold-text">Winterlaufserie</span>
+    </div>
+  </div>
+  <main>
+    <section id="signup">
+      <div class="form-group">
+        <h3>Name</h3>
+        <input type="text" id="vorname" name="vorname" placeholder="Vorname">
+      </div>
+      <div class="form-group">
+        <input type="text" id="nachname" name="nachname" placeholder="Nachname">
+      </div>
+      <div class="form-group">
+        <h3>Geschlecht</h3>
+        <select id="geschlecht" name="geschlecht">
+          <option value="" selected disabled>Auswählen</option>
+          <option value="maennlich">Männlich</option>
+          <option value="weiblich">Weiblich</option>
+          <option value="divers">Divers</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Jahrgang</h3>
+        <select id="jahrgang" name="jahrgang">
+          <option value="" selected disabled>Auswählen</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <h3>Verein</h3>
+        <input type="text" id="verein" name="verein" placeholder="Name des Vereins eingeben">
+      </div>
+      <div class="form-group">
+        <h3>Email</h3>
+        <input type="email" id="email" name="email" placeholder="E-Mail Adresse eingeben">
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Generate the years from 2024 to 1990 and add them to the Jahrgang select element
+    const jahrgangSelect = document.getElementById('jahrgang');
+    const currentYear = new Date().getFullYear(); // Get the current year
+    for (let year = currentYear; year >= 1990; year--) {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year;
+      jahrgangSelect.appendChild(option);
+    }
+  </script>
+</body>
+</html>

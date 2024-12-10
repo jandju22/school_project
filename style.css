@@ -1,0 +1,144 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #006EA1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  color: gray;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 100px;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+.nav-links {
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: gray;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #006EA1;
+}
+
+.cover-image {
+  background-image: url('cover.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cover-text {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+#signup {
+  width: 40%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: -50px;
+  margin-left: 5%;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input::placeholder,
+select::placeholder {
+  color: #888;
+}
+
+select {
+  padding: 0.8rem;
+}
+
+/* Bank info box styling */
+.bank-info {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 2px solid #006EA1;
+  margin-top: 10px;
+}
+
+.bank-info p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    margin: 0.5rem 0;
+  }
+
+  .cover-text {
+    font-size: 2rem;
+  }
+
+  #signup {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
