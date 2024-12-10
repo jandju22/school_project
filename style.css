@@ -69,14 +69,24 @@ main {
   padding: 2rem;
 }
 
+.container {
+  display: flex;
+  justify-content: center; /* Center the content */
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #signup {
-  width: 40%;
+  width: 95%; /* Increased width of the sign-up box */
+  max-width: 1200px; /* Ensure it doesn't get too wide on very large screens */
   background-color: #fff;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: -50px;
-  margin-left: 5%;
+  position: relative; /* Allow absolute positioning for the warning box */
+  margin-top: 30px; /* Space above the form */
 }
 
 .form-group {
@@ -90,11 +100,12 @@ h3 {
 
 input,
 select {
-  width: 100%;
-  padding: 0.8rem;
+  width: 30%; /* Reduced width of inputs to make them smaller */
+  padding: 0.8rem; /* Adjusted padding to make inputs more compact */
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin: 0 auto;
 }
 
 input::placeholder,
@@ -103,22 +114,121 @@ select::placeholder {
 }
 
 select {
-  padding: 0.8rem;
+  padding: 1rem;
+}
+
+input[name="geschlecht"],
+input[name="jahrgang"] {
+  width: 30%; /* Reduced the width of these specific inputs */
+  padding: 0.6rem; /* Reduced padding */
+}
+
+select[name="geschlecht"],
+select[name="jahrgang"] {
+  width: 30%; /* Reduced the width of these specific selects */
+  padding: 0.6rem; /* Reduced padding */
 }
 
 /* Bank info box styling */
 .bank-info {
   background-color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 4px;
   border: 2px solid #006EA1;
   margin-top: 10px;
+  display: inline-block; /* Adjust the width based on content */
+  padding-right: 2rem; /* Optional: to add some spacing on the right */
 }
+
 
 .bank-info p {
   margin: 0;
 }
 
+/* Warning Box */
+.warning-box {
+  background-color: white;
+  border: 2px solid red;
+  color: red;
+  padding: 1.5rem;
+  width: 30%; /* Adjusted width to fit inside */
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 10px; /* Adjusted to move the box slightly to the left */
+}
+
+.warning-box strong {
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color: #006EA1;
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #005a88;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #006EA1;
+}
+
+.instagram::before {
+  content: '📸';
+}
+
+.facebook::before {
+  content: '📘';
+}
+
+/* Checkbox and Label Styling */
+.form-group label {
+  display: inline-block;
+  margin-right: 10px; /* Adds some spacing between the label and the checkbox */
+}
+
+.form-group input[type="checkbox"] {
+  display: inline-block;
+  margin: 0; /* Removes default margin */
+  vertical-align: middle; /* Aligns the checkbox vertically with the text */
+}
+
+
+/* General Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -137,8 +247,27 @@ select {
     font-size: 2rem;
   }
 
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
   #signup {
-    width: 80%;
-    margin-left: 10%;
+    width: 90%; /* Adjusted to fit on smaller screens */
+    margin-left: 5%;
+  }
+
+  .warning-box {
+    background-color: white;
+    border: 10px solid red;
+    color: red;
+    padding: 4.5rem;
+    width: 30%;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 10px; /* Adjusted from 0px to 10px to push it a bit left */
   }
 }
