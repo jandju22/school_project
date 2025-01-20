@@ -1,114 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anmeldung zur Winterlaufserie</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung zur Winterlaufserie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
+<header class="navbar">
     <div class="logo">
-      <img src="logo.png" alt="Logo">
+        <img src="logo.png" alt="Logo">
     </div>
     <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
-  </header>
-  <div class="cover-image">
+</header>
+
+<div class="cover-image">
     <div class="cover-text">
-      Anmeldung zur <span class="bold-text">Winterlaufserie</span>
+        Anmeldung zur <span class="bold-text">Winterlaufserie</span>
     </div>
-  </div>
-  <main>
+</div>
+
+<main>
     <section id="signup">
-      <div class="form-container">
-        <div class="form-group">
-          <h3>Name</h3>
-          <input type="text" id="vorname" name="vorname" placeholder="Vorname">
-        </div>
-        <div class="form-group">
-          <input type="text" id="nachname" name="nachname" placeholder="Nachname">
-        </div>
-        <div class="form-group">
-          <h3>Geschlecht</h3>
-          <select id="geschlecht" name="geschlecht">
-            <option value="" selected disabled>Auswählen</option>
-            <option value="maennlich">Männlich</option>
-            <option value="weiblich">Weiblich</option>
-            <option value="divers">Divers</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <h3>Jahrgang</h3>
-          <select id="jahrgang" name="jahrgang">
-            <option value="" selected disabled>Auswählen</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <h3>Verein</h3>
-          <input type="text" id="verein" name="verein" placeholder="Name des Vereins eingeben">
-        </div>
-        <div class="form-group">
-          <h3>Email</h3>
-          <input type="email" id="email" name="email" placeholder="E-Mail Adresse eingeben">
+        <div class="form-container">
+            <form id="signupForm">
+                <div class="form-group" style="display: flex; align-items: center;">
+                    <label for="vorname" style="width: 150px;">Vorname</label>
+                    <input type="text" id="vorname" name="vorname" placeholder="Vorname" required style="flex: 1;">
+                </div>
+                <div class="form-group" style="display: flex; align-items: center;">
+                    <label for="nachname" style="width: 150px;">Nachname</label>
+                    <input type="text" id="nachname" name="nachname" placeholder="Nachname" required style="flex: 1;">
+                </div>
+                <div class="form-group" style="display: flex; align-items: center;">
+                    <label for="geschlecht" style="width: 150px;">Geschlecht</label>
+                    <select id="geschlecht" name="geschlecht" required style="flex: 1;">
+                        <option value="" selected disabled>Auswählen</option>
+                        <option value="maennlich">Männlich</option>
+                        <option value="weiblich">Weiblich</option>
+                        <option value="divers">Divers</option>
+                    </select>
+                </div>
+                <div class="form-group" style="display: flex; align-items: center;">
+                    <label for="jahrgang" style="width: 150px;">Jahrgang</label>
+                    <select id="jahrgang" name="jahrgang" required style="flex: 1;">
+                        <option value="" selected disabled>Auswählen</option>
+                    </select>
+                </div>
+                <div class="form-group" style="display: flex; align-items: center;">
+                    <label for="verein" style="width: 150px;">Verein</label>
+                    <input type="text" id="verein" name="verein" placeholder="Name des Vereins eingeben" style="flex: 1;">
+                </div>
+                <div class="form-group" style="display: flex; align-items: center;">
+                    <label for="email" style="width: 150px;">Email</label>
+                    <input type="email" id="email" name="email" placeholder="E-Mail Adresse eingeben" required style="flex: 1;">
+                </div>
+
+                <!-- Price Table -->
+                <div class="price-table">
+                    <table border="1">
+                        <tr>
+                            <th>Veranstaltung</th>
+                            <th>Serie<br>1000 m</th>
+                            <th>Serie<br>5 km</th>
+                            <th>Serie<br>10 km</th>
+                            <th>Einzel<br>1000 m</th>
+                            <th>Einzel<br>5 km</th>
+                            <th>Einzel<br>10 km</th>
+                        </tr>
+                        <tr>
+                            <td>16.11.2024</td>
+                            <td rowspan="4" align="center" valign="middle">nicht<br>mehr<br>mög-<br>lich</td>
+                            <td rowspan="4" align="center" valign="middle">nicht<br>mehr<br>mög-<br>lich</td>
+                            <td rowspan="4" align="center" valign="middle">nicht<br>mehr<br>mög-<br>lich</td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>21.12.2024</td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>18.01.2025</td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>15.02.2025</td>
+                            <td align="center"><input type="checkbox" name="einzel" value="1000m"></td>
+                            <td align="center"><input type="checkbox" name="einzel" value="5km"></td>
+                            <td align="center"><input type="checkbox" name="einzel" value="10km"></td>
+                        </tr>
+                        <tr>
+                            <th>Startgeld bei<br>Voranmeldung</th>
+                            <th>10 Euro</th>
+                            <th>26 Euro</th>
+                            <th>32 Euro</th>
+                            <th>3 Euro</th>
+                            <th>8 Euro</th>
+                            <th>10 Euro</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Bank account info and consent -->
+                <div class="form-group">
+                    <p>Das Startgeld überweise ich auf das Konto:</p>
+                    <div class="bank-info">
+                        <p>Tria Team Seligenstadt</p>
+                        <p>Konto: 1136720</p>
+                        <p>BLZ: 506 521 24</p>
+                        <p>IBAN: DE35 5065 2124 0001 1367 20</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p>Mit Absenden des Formulars gebe ich mein Einverständnis zur elektronischen Speicherung meiner Daten bis zum Ende der vierten Veranstaltung im Februar. Ich starte auf eigene Gefahr und nehme zur Kenntnis, dass der Veranstalter keine Haftung für Diebstahl oder Unfall übernimmt.</p>
+                </div>
+
+                <!-- Additional consent text and checkbox -->
+                <div class="form-group">
+                    <input type="checkbox" id="emailConsent" name="emailConsent">
+                    <label for="emailConsent">
+                        Ich bin zusätzlich damit einverstanden, im nächsten Jahr einmalig per E-Mail auf die Winterlaufserie aufmerksam gemacht zu werden.
+                    </label>
+                </div>
+
+                <!-- Submit button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Anmelden</button>
+                </div>
+            </form>
         </div>
 
-        <!-- Bank account info and consent -->
-        <div class="form-group">
-          <p>Das Startgeld überweise ich auf das Konto</p>
-          <div class="bank-info">
-            <p>Tria Team Seligenstadt</p>
-            <p>Konto   1136720</p>
-            <p>BLZ      506 521 24</p>
-            <p>IBAN    DE35 5065 2124 0001 1367 20</p>
-          </div>
-        </div>
-        <div class="form-group">
-          <p>Mit Absenden des Formulars gebe ich mein Einverständnis zur elektronischen Speicherung meiner Daten bis zum Ende der vierten Veranstaltung im Februar. Ich starte auf eigene Gefahr und nehme zur Kenntnis, dass der Veranstalter keine Haftung für Diebstahl oder Unfall übernimmt.</p>
-        </div>
-
-        <!-- Additional consent text and checkbox -->
-        <div class="form-group">
-          <label for="emailConsent">
-            Ich bin zusätzlich damit einverstanden, im nächsten Jahr einmalig per eMail auf die Winterlaufserie aufmerksam gemacht zu werden.
-          </label>
-          <input type="checkbox" id="emailConsent" name="emailConsent">
-        </div>
-
-        <!-- Submit button -->
-        <div class="form-group">
-          <button type="submit" class="submit-btn">Anmelden</button>
-        </div>
-      </div>
-
-      <!-- Warning box on the right side -->
-      <div class="warning-box">
-        <p><strong>Achtung!</strong> Online-Anmeldung für die Läufe jeweils nur bis eine Woche vor dem Lauf. Wird das Startgeld nicht überwiesen, sondern am Wettkampftag bar bezahlt, wird die Meldung als Nachmeldung mit erhöhtem Startgeld behandelt.</p>
-      </div>
+        <!-- Warning box on the right side -->
+        <aside class="warning-box">
+            <p><strong>Achtung!</strong> Online-Anmeldung für die Läufe jeweils nur bis eine Woche vor dem Lauf. Wird das Startgeld nicht überwiesen, sondern am Wettkampftag bar bezahlt, wird die Meldung als Nachmeldung mit erhöhtem Startgeld behandelt.</p>
+        </aside>
     </section>
-  </main>
+</main>
 
-  <!-- Footer with social media icons -->
-  <footer class="footer">
+<!-- Footer with social media icons -->
+<footer class="footer">
     <div class="footer-content">
-      <a href="https://www.instagram.com/spvgg.seligenstadt/" target="_blank" class="social-icon instagram">Instagram</a>
-      <a href="https://www.facebook.com/spvgg.seligenstadt?ref=aymt_homepage_panel" target="_blank" class="social-icon facebook">Facebook</a>
+        <a href="https://www.instagram.com/spvgg.seligenstadt/" target="_blank" class="social-icon instagram">Instagram</a>
+        <a href="https://www.facebook.com/spvgg.seligenstadt?ref=aymt_homepage_panel" target="_blank" class="social-icon facebook">Facebook</a>
     </div>
-  </footer>
+</footer>
 
-  <script>
-    // Generate the years from 2024 to 1900 and add them to the Jahrgang select element
+<script>
+    // Generate the years from the current year to 1900 and add them to the Jahrgang select element
     const jahrgangSelect = document.getElementById('jahrgang');
-    const currentYear = new Date().getFullYear(); // Get the current year
+    const currentYear = new Date().getFullYear();
     for (let year = currentYear; year >= 1900; year--) {
-      const option = document.createElement('option');
-      option.value = year;
-      option.textContent = year;
-      jahrgangSelect.appendChild(option);
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        jahrgangSelect.appendChild(option);
     }
-  </script>
+
+    // Ensure only one checkbox in the 15.02.2025 row is selected
+    const checkboxes = document.querySelectorAll('input[name="einzel"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            checkboxes.forEach(box => {
+                if (box !== checkbox) box.checked = false;
+            });
+        });
+    });
+</script>
 </body>
 </html>
